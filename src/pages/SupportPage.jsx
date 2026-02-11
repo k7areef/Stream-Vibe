@@ -7,8 +7,10 @@ function SupportPage() {
     useChangeTitle("Support")
     return (
         <div className="support-page">
-            <ContactForm />
-            <Faqs />
+            <main>
+                <ContactForm />
+                <Faqs />
+            </main>
         </div>
     )
 }

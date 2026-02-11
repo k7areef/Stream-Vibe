@@ -28,6 +28,7 @@ function NavNotifications() {
                 className={`nav-notifications-button text-2xl transition duration-300 ease-in-out ${opened ? "text-red-45" : ""}`}
             >
                 <FontAwesomeIcon icon={faBell} />
+                <span className="sr-only">Notifications</span>
             </button>
             {/* Notification Box */}
             <div

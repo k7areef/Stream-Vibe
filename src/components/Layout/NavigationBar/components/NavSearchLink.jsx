@@ -6,9 +6,12 @@ function NavSearchLink() {
     return (
         <Link
             to={'/search'}
+            title="Search"
+            aria-label="Search"
             className="nav-link text-2xl"
         >
             <FontAwesomeIcon icon={faSearch} />
+            <span className="sr-only">Search</span>
         </Link>
     )
 }

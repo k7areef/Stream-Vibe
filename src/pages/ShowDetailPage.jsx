@@ -29,12 +29,14 @@ function ShowDetailPage() {
 
     return (
         <div className="show-detail-page">
-            <VideoScreen
-                media={showData}
-                isloading={isDataReady}
-                mediaReviews={showReviewsData?.results || []}
-            />
-            <MediaInormation media={showData} isLoading={isDataReady} mediaType="show" />
+            <main>
+                <VideoScreen
+                    media={showData}
+                    isloading={isDataReady}
+                    mediaReviews={showReviewsData?.results || []}
+                />
+                <MediaInormation media={showData} isLoading={isDataReady} mediaType="show" />
+            </main>
         </div>
     )
 }

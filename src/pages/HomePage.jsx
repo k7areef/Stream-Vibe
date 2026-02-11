@@ -10,11 +10,13 @@ function HomePage() {
     useChangeTitle("Home")
     return (
         <div className="home-page">
-            {/* <HeroSection /> */}
-            <Categories />
-            <Devices />
-            <Faqs />
-            <Pricing />
+            <main>
+                {/* <HeroSection /> */}
+                <Categories />
+                <Devices />
+                <Faqs />
+                <Pricing />
+            </main>
         </div>
     )
 }

@@ -33,17 +33,19 @@ function MovieDetailPage() {
 
     return (
         <div className="movie-detail-page">
-            <VideoScreen
-                media={movieData}
-                isloading={isDataLoading}
-                watchProviders={watchProviders?.results?.EG || []}
-            />
-            <MediaInormation
-                media={movieData}
-                isLoading={isDataLoading}
-                mediaType="movie"
-                mediaReviews={movieReviewsData?.results || []}
-            />
+            <main>
+                <VideoScreen
+                    media={movieData}
+                    isloading={isDataLoading}
+                    watchProviders={watchProviders?.results?.EG || []}
+                />
+                <MediaInormation
+                    media={movieData}
+                    isLoading={isDataLoading}
+                    mediaType="movie"
+                    mediaReviews={movieReviewsData?.results || []}
+                />
+            </main>
         </div>
     )
 }

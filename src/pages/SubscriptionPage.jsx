@@ -7,8 +7,10 @@ function SubscriptionPage() {
     useChangeTitle("Subscription")
     return (
         <div className="subscription-page">
-            <Pricing />
-            {/* <FeaturesAndComparison /> */}
+            <main>
+                <Pricing />
+                {/* <FeaturesAndComparison /> */}
+            </main>
         </div>
     )
 }

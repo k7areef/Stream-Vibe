@@ -83,6 +83,7 @@ function GenreCard({ index = 0, isLoading = true, genre = {}, mediaType = "movie
                             src={images[genre.id]}
                             className={`rounded-md w-full aspect-square object-cover block`}
                         />
+                        <span className="sr-only">{genre.name}</span>
                         <div className="overlay absolute z-1 left-0 bottom-0 w-full h-full bg-linear-to-t from-black-10 to-transparent"></div>
                     </Link>
                 )
