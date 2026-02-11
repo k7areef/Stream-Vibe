@@ -1,0 +1,33 @@
+{
+    "title": "Choose the plan that's right for you",
+    "description": "Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!",
+    "pricingList": [
+        {
+            "id": 1,
+            "name": "Basic Plan",
+            "price": {
+                "monthly": "9.99",
+                "yearly": "12.99"
+            },
+            "description": "Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles."
+        },
+        {
+            "id": 2,
+            "name": "Standard Plan",
+            "price": {
+                "monthly": "12.99",
+                "yearly": "16.99"
+            },
+            "description": "Access to a wider selection of movies and shows, including most new releases and exclusive content"
+        },
+        {
+            "id": 3,
+            "name": "Premium Plan",
+            "price": {
+                "monthly": "14.99",
+                "yearly": "20.99"
+            },
+            "description": "Access to a widest selection of movies and shows, including all new releases and Offline Viewing"
+        }
+    ]
+}

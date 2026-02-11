@@ -1,0 +1,42 @@
+{
+    "title": "We Provide you streaming experience across various devices.",
+    "description": "With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is designed to be compatible with a wide range of devices, ensuring that you never miss a moment of entertainment.",
+    "devicesList": [
+    {
+        "id": 1,
+        "iconPath": "iconPage",
+        "title": "Smartphones",
+        "description": "StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+    },
+    {
+        "id": 2,
+        "iconPath": "iconPage",
+        "title": "Tablet",
+        "description": "StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+    },
+    {
+        "id": 3,
+        "iconPath": "iconPage",
+        "title": "Smart TV",
+        "description": "StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+    },
+    {
+        "id": 4,
+        "iconPath": "iconPage",
+        "title": "Laptops",
+        "description": "StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+    },
+    {
+        "id": 5,
+        "iconPath": "iconPage",
+        "title": "Gaming Consoles",
+        "description": "StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+    },
+    {
+        "id": 6,
+        "iconPath": "iconPage",
+        "title": "VR Headsets",
+        "description": "StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+    }
+]
+}

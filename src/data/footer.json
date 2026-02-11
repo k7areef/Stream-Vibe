@@ -1,0 +1,52 @@
+{
+    "copyright": {
+        "text": "streamvib, All Rights Reserved",
+        "links": [
+            {"to": "", "label": "Terms of Use"},
+            {"to": "", "label": "Privacy Policy"},
+            {"to": "", "label": "Cookie Policy"}
+        ]
+    },
+    "linksColumns": [
+    {
+        "title": "Home",
+        "links": [
+            { "to": "/#categories", "label": "Categories" },
+            { "to": "/#devices", "label": "Devices" },
+            { "to": "/#pricing", "label": "Pricing" },
+            { "to": "/#faqs", "label": "FAQ" }
+        ]
+    },
+    {
+        "title": "Movies",
+        "links": [
+            { "to": "/movies-and-shows#genres", "label": "Gernes" },
+            { "to": "/movies-and-shows#trending", "label": "Trending" },
+            { "to": "/movies-and-shows#new-release", "label": "New Release" },
+            { "to": "/movies-and-shows#popular", "label": "Popular" }
+        ]
+    },
+    {
+        "title": "Shows",
+        "links": [
+            { "to": "/movies-and-shows#genres", "label": "Gernes" },
+            { "to": "/movies-and-shows#trending", "label": "Trending" },
+            { "to": "/movies-and-shows#new-release", "label": "New Release" },
+            { "to": "/movies-and-shows#popular", "label": "Popular" }
+        ]
+    },
+    {
+        "title": "Support",
+        "links": [
+            { "to": "/support#contact", "label": "Contact Us" }
+        ]
+    },
+    {
+        "title": "Subscribtion",
+        "links": [
+            { "to": "/subscribtion#plans", "label": "Plans" },
+            { "to": "/subscribtion#features", "label": "Features" }
+        ]
+    }
+]
+}
