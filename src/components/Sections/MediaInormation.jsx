@@ -1,5 +1,5 @@
 import Button from "@components/UI/Button";
-import { faCalendar, faLanguage, faPlus, faStar, faTableCellsLarge } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight, faCalendar, faLanguage, faPlus, faStar, faTableCellsLarge } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,12 +7,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 function MediaInormation({ media = {}, isLoading = true, mediaType = "movie", mediaReviews = [] }) {
 
     const {
+        id,
         overview = '',
         release_date = '',
         first_air_date = '',
         spoken_languages = [],
         genres = []
     } = media;
+
+    const previousClass = `reviews-${id}-button-previous`;
+    const nextClass = `reviews-${id}-button-next`;
+    const paginationClass = `reviews-${id}-pagination`;
+    const navigationButtonStyle = 'bg-black-10 border border-black-12 rounded-md p-3 transition sm:hover:bg-black-12 shrink-0';
 
     return (
         <section className="media-information py-5 md:py-10" key={media.id}>
@@ -120,24 +126,49 @@ function MediaInormation({ media = {}, isLoading = true, mediaType = "movie", me
                                         <span>Add Your Review</span>
                                     </Button>
                                 </div>
-                                <div className="reviews-slider">
+                                <div className="reviews-slider mb-5">
                                     <Swiper
-                                        // install Swiper modules
                                         modules={[Navigation, Pagination]}
                                         spaceBetween={15}
                                         slidesPerView={2}
-                                        navigation
-                                        pagination={{ clickable: true }}
+                                        navigation={{
+                                            prevEl: `.${previousClass}`,
+                                            nextEl: `.${nextClass}`
+                                        }}
+                                        pagination={{
+                                            el: `.${paginationClass}`,
+                                            clickable: true,
+                                            renderBullet: (_, className) => {
+                                                return `<span class="${className} w-4! h-1 bg-red-45! rounded-sm! transition-all duration-300 [&.swiper-pagination-bullet-active]:w-6!"></span>`;
+                                            }
+                                        }}
+                                        breakpoints={{
+                                            0: {
+                                                slidesPerView: 1
+                                            },
+                                            420: {
+                                                slidesPerView: 1.5
+                                            },
+                                            840: {
+                                                slidesPerView: 2
+                                            },
+                                            1024: {
+                                                slidesPerView: 1.5
+                                            },
+                                            1300: {
+                                                slidesPerView: 2
+                                            }
+                                        }}
                                     >
                                         {
                                             mediaReviews.filter(review => (review.author_details && review.content)).map((review, index) => (<SwiperSlide key={index}>
                                                 <div className={`media-review-${review.id || index} bg-black-06 border border-black-15 rounded-md p-5`}>
-                                                    <div className="header-review flex items-center justify-between gap-3 mb-3">
+                                                    <div className="header-review flex sm:items-center justify-between gap-3 mb-3 max-sm:flex-col">
                                                         <div className="auothr-info space-y-1">
-                                                            <h3 className="review-author-name font-medium">{review.author_details?.name}</h3>
+                                                            <h3 className="review-author-name font-medium">{review.author_details?.name || "Anonymous"}</h3>
                                                             <p>{review.author_details?.username}</p>
                                                         </div>
-                                                        <ul className="rating ms-auto flex items-center gap-1 bg-black-08 border border-black-15 rounded-full py-1 px-2">
+                                                        <ul className="rating ms:ms-auto w-fit flex items-center gap-1 bg-black-08 border border-black-15 rounded-full py-1 px-2">
                                                             {Array.from({ length: 5 }).map((_, index) => {
                                                                 const isFilled = index + 1 <= Math.round(review.author_details?.rating);
 
@@ -160,6 +191,26 @@ function MediaInormation({ media = {}, isLoading = true, mediaType = "movie", me
                                             </SwiperSlide>))
                                         }
                                     </Swiper>
+                                </div>
+                                <div className="slider-navigation shrink-0 flex items-center justify-between gap-3 bg-black-08 border border-black-12 rounded-md py-2 px-4">
+                                    {/* Previous Button */}
+                                    <button
+                                        title="Previous Slide"
+                                        aria-label="Previous Slide"
+                                        className={`${previousClass} ${navigationButtonStyle} max-sm:w-full max-sm:shrink`}
+                                    >
+                                        <FontAwesomeIcon icon={faArrowLeft} />
+                                    </button>
+                                    {/* Dots */}
+                                    <div className={`${paginationClass} w-fit! max-sm:hidden`}></div>
+                                    {/* Next Button */}
+                                    <button
+                                        title="Next Slide"
+                                        aria-label="Next Slide"
+                                        className={`${nextClass} ${navigationButtonStyle} max-sm:w-full max-sm:shrink`}
+                                    >
+                                        <FontAwesomeIcon icon={faArrowRight} />
+                                    </button>
                                 </div>
                             </div>
                         )
