@@ -97,7 +97,7 @@ function ContactForm() {
                             <h2 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl mb-3">Welcome to our support page!</h2>
                             <p>We're here to help you with any problems you may be having with our product.</p>
                         </div>
-                        <div className="contact-hero-img rounded-md overflow-hidden border-4 border-black-15 bg-black-06">
+                        <div className="contact-hero-img rounded-md overflow-hidden border-4 border-black-15 bg-black-06 aspect-square">
                             <img
                                 src={heroImage}
                                 alt="Contact Hero"
