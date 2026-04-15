@@ -101,7 +101,7 @@ function ContactForm() {
                             <img
                                 src={heroImage}
                                 alt="Contact Hero"
-                                className="object-cover w-full h-auto"
+                                className="object-cover w-full h-full"
                             />
                         </div>
                     </div>
